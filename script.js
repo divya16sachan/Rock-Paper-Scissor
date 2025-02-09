@@ -1,28 +1,26 @@
-const choices = ["rock", "paper", "scissors"];
-const buttons = document.querySelectorAll(".choice-btn");
-const resultText = document.querySelector(".result-text");
+const choices = ["Rock", "Paper", "Scissors"];
 
-buttons.forEach(button => {
-    button.addEventListener("click", () => {
-        const userChoice = button.getAttribute("data-choice");
-        const computerChoice = choices[Math.floor(Math.random() * 3)];
-        
+document.querySelectorAll(".choice").forEach(button => {
+    button.addEventListener("click", function () {
+        let userChoice = this.innerText.split(" ")[1];  
+        let computerChoice = choices[Math.floor(Math.random() * 3)];
+
+        document.getElementById("user-move").innerText = userChoice;
+        document.getElementById("computer-move").innerText = computerChoice;
+
         let result = "";
         if (userChoice === computerChoice) {
             result = "It's a Draw! 😐";
-            resultText.className = "result-text draw";
         } else if (
-            (userChoice === "rock" && computerChoice === "scissors") ||
-            (userChoice === "paper" && computerChoice === "rock") ||
-            (userChoice === "scissors" && computerChoice === "paper")
+            (userChoice === "Rock" && computerChoice === "Scissors") ||
+            (userChoice === "Paper" && computerChoice === "Rock") ||
+            (userChoice === "Scissors" && computerChoice === "Paper")
         ) {
-            result = `You Win! 🎉 (${userChoice} beats ${computerChoice})`;
-            resultText.className = "result-text win";
+            result = "You Win! 🎉";
         } else {
-            result = `You Lose! 😢 (${computerChoice} beats ${userChoice})`;
-            resultText.className = "result-text lose";
+            result = "Computer Wins! 🤖";
         }
 
-        resultText.innerHTML = result;
+        document.getElementById("result").innerText = result;
     });
 });

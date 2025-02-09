@@ -1,82 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
 body {
-    background: linear-gradient(135deg, #1f1c2c, #928DAB);
-    color: white;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #2C3E50, #4CA1AF);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    text-align: center;
+    color: white;
+    margin: 0;
 }
 
 .game-container {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    width: 90%;
+    background: #3b3b4f;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     max-width: 400px;
 }
 
 h1 {
-    font-size: 2rem;
     margin-bottom: 10px;
 }
 
-.subtitle {
-    font-size: 1rem;
-    margin-bottom: 20px;
-}
-
-.buttons {
+.choices {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
+    justify-content: center;
+    gap: 10px;
 }
 
-.choice-btn {
-    background: linear-gradient(135deg, #34e89e, #0f3443);
+.choice {
+    background: linear-gradient(to bottom, #32CD32, #228B22);
     border: none;
-    padding: 12px 20px;
     color: white;
-    font-size: 1rem;
-    border-radius: 10px;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    outline: none;
+    transition: transform 0.2s ease;
 }
 
-.choice-btn:hover {
+.choice:hover {
     transform: scale(1.1);
-    background: linear-gradient(135deg, #56ab2f, #a8e063);
 }
 
-.result-container {
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 15px;
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.2);
+#moves {
     margin-top: 20px;
-    transition: all 0.3s ease-in-out;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 8px;
 }
 
-.win {
-    color: #4CAF50;
-}
-
-.lose {
-    color: #FF3B3B;
-}
-
-.draw {
-    color: #FFC107;
+#result {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: yellow;
 }

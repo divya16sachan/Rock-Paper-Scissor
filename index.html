@@ -9,17 +9,21 @@
 <body>
     <div class="game-container">
         <h1>Rock Paper Scissors</h1>
-        <p class="subtitle">Choose your move:</p>
-        
-        <div class="buttons">
-            <button class="choice-btn" data-choice="rock">✊ Rock</button>
-            <button class="choice-btn" data-choice="paper">✋ Paper</button>
-            <button class="choice-btn" data-choice="scissors">✌️ Scissors</button>
+        <p>Choose your move:</p>
+
+        <div class="choices">
+            <button class="choice" id="rock">✊ Rock</button>
+            <button class="choice" id="paper">✋ Paper</button>
+            <button class="choice" id="scissors">✌ Scissors</button>
         </div>
 
-        <div class="result-container">
-            <p class="result-text">Make your move!</p>
+        <!-- Moves Display -->
+        <div id="moves">
+            <p><strong>User:</strong> <span id="user-move">❓</span></p>
+            <p><strong>Computer:</strong> <span id="computer-move">❓</span></p>
         </div>
+
+        <div id="result">Make your move!</div>
     </div>
 
     <script src="script.js"></script>
