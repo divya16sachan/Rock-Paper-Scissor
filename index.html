@@ -3,29 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
+    <title>Rock Paper Scissors - Best of 5</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="game-container">
         <h1>Rock Paper Scissors</h1>
         <p>Choose your move:</p>
-
-        <div class="choices">
-            <button class="choice" id="rock">✊ Rock</button>
-            <button class="choice" id="paper">✋ Paper</button>
-            <button class="choice" id="scissors">✌ Scissors</button>
+        <div class="buttons">
+            <button onclick="playGame('rock')">✊ Rock</button>
+            <button onclick="playGame('paper')">✋ Paper</button>
+            <button onclick="playGame('scissors')">✌️ Scissors</button>
         </div>
-
-        <!-- Moves Display -->
-        <div id="moves">
-            <p><strong>User:</strong> <span id="user-move">❓</span></p>
-            <p><strong>Computer:</strong> <span id="computer-move">❓</span></p>
+        <div class="scoreboard">
+            <p>User: <span id="user-move">❓</span></p>
+            <p>Computer: <span id="computer-move">❓</span></p>
+            <p>Score - You: <span id="user-score">0</span> | Computer: <span id="computer-score">0</span></p>
         </div>
-
-        <div id="result">Make your move!</div>
+        <p class="result" id="result">Make your move!</p>
+        <button id="restart" onclick="restartGame()">Restart Game</button>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
